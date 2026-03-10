@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   # Get /about
-  get "about", to: "about#index"
+  get "about-us", to: "about#index", as: :about
 
   # Get /main
   get "/", to: "main#index"
+
+  # Get /profile
+  get "/profile", to: "profile#index"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
