@@ -8,3 +8,7 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+.form{
+    max-width: 400px;
+    width: 100%;
+}
