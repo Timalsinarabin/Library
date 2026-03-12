@@ -15,5 +15,10 @@ Rails.application.routes.draw do
 
   get "/dashboard", to: "dashboard#index"
 
+  get "/viewbook", to: "viewbooks#viewall", as: :viewall_books
+
+  get "/Addbook", to: "addbook#new", as: :add_book
+  post "/Addbook", to: "addbook#create"
+
   get "up" => "rails/health#show", as: :rails_health_check
 end

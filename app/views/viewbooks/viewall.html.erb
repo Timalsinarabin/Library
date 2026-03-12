@@ -1,0 +1,17 @@
+<h1 class="display-4 m-4">All Books</h1>
+<table class="table table-striped m-4">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @books.each do |book| %>
+            <tr>
+                <td><%= book.bookname %></td>
+                <td><%= book.author %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
