@@ -20,5 +20,7 @@ Rails.application.routes.draw do
   get "/Addbook", to: "addbook#new", as: :add_book
   post "/Addbook", to: "addbook#create"
 
+  get "/Removebook", to: "removebook#index", as: :remove_book
+  delete "/Removebook/:id", to: "removebook#destroy", as: :remove
   get "up" => "rails/health#show", as: :rails_health_check
 end

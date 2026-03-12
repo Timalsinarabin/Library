@@ -1,12 +1,12 @@
 
 <% if flash[:notice] %>
-    <div class="alert alert-success position-absolute d-flex end-0" role="alert">
+    <div class="message alert alert-success position-absolute d-flex end-0" role="alert">
         <%= flash[:notice] %>
     </div>
 <% end %>
 
 <% if flash[:alert] %>
-    <div class="alert alert-danger position-absolute d-flex end-0" role="alert">
+    <div class="message alert alert-danger position-absolute d-flex end-0" role="alert">
         <%= flash[:alert] %>
     </div>
 <% end %>
