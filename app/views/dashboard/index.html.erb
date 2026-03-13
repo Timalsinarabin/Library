@@ -1,7 +1,11 @@
 
 <main class="main-content p-4">
     <div class="container">
-        <h1>Welcome to the Library Dashboard</h1>
+        <% if @user %>
+            <h1>Welcome, <%= @user.username %> to the Library Dashboard </h1>
+        <%else%>
+            <h1>Welcome to the Library Dashboard User</h1>
+        <%end%>
         <p>Use the menu on the left to manage your library.</p>
     </div>
     <div class="container mt-4">
@@ -10,7 +14,7 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5 class="card-title">View All Books</h5>
-                        <p class="card-text">Browse the entire collection of books in the library.</p>
+                        <p class="card-text">Browse the entire collection of books.</p>
                         <%= link_to "View Books", viewall_books_path, class: "btn btn-primary nav-viewall" %>
                     </div>
                 </div>
@@ -29,7 +33,7 @@
                     <div class="card-body">
                         <h5 class="card-title   ">Remove a Book</h5>
                         <p class="card-text">Remove books from the library collection.</p>
-                        <a href="#" class="btn btn-primary nav-removebook">Remove Book</a>
+                        <%= link_to "Remove Book", remove_book_path, class: "btn btn-primary nav-removebook" %>
                     </div>
                 </div>
             </div>
@@ -40,7 +44,7 @@
                     <div class="card-body">
                         <h5 class="card-title   ">Loan a Book</h5>
                         <p class="card-text">Loan books to library members.</p>
-                        <a href="#" class="btn btn-primary nav-loanBook">Loan Book</a>
+                        <%= link_to "Loan Book", loan_book_path, class: "btn btn-primary nav-removebook"%>
                     </div>
                 </div>
             </div>
@@ -48,11 +52,14 @@
                 <div class="card mb-4"> 
                     <div class="card-body">
                         <h5 class="card-title   ">List Borrowed Books</h5>
-                        <p class="card-text">View all currently borrowed books and their borrowers.</p>
+                        <p class="card-text">View details of all currently borrowed books.</p>
                         <a href="#" class="btn btn-primary nav-listBorrow">List Borrowed Books</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container mt-4 text-center">
+        <%= link_to "logout", logout_path, method: :delete, class: "btn btn-danger" %>
     </div>
 </main>
