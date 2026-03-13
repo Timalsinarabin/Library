@@ -1,5 +1,5 @@
 class ViewbooksController < ApplicationController
   def viewall
-    @books = LibBook.all
+    @books = LibBook.order(:bookname)
   end
 end
