@@ -44,7 +44,7 @@
                     <div class="card-body">
                         <h5 class="card-title   ">Loan a Book</h5>
                         <p class="card-text">Loan books to library members.</p>
-                        <%= link_to "Loan Book", loan_book_path, class: "btn btn-primary nav-removebook"%>
+                        <%= link_to "Loan Book", loan_book_path, class: "btn btn-primary nav-loanbook"%>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <div class="card-body">
                         <h5 class="card-title   ">List Borrowed Books</h5>
                         <p class="card-text">View details of all currently borrowed books.</p>
-                        <a href="#" class="btn btn-primary nav-listBorrow">List Borrowed Books</a>
+                        <%= link_to "List Borrowed Books",view_loan_path, class: "btn btn-primary nav-listBorrowedbook"%>
                     </div>
                 </div>
             </div>

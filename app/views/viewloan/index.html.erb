@@ -1,0 +1,21 @@
+<h1 class="display-4 m-4">All Books</h1>
+<table class="table table-striped m-4">
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>Book Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @viewLoan.each do |v| %>
+            <tr>
+                <td><%= v.std_id %></td>
+                <td><%= v.bookname %></td>
+                <td>
+                    <%= button_to "Return", returnbook_path(v), method: :delete, class: "btn btn-danger" %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

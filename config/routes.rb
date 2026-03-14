@@ -25,10 +25,14 @@ Rails.application.routes.draw do
 
   # Remove a book from library
   get "Removebook", to: "removebook#index", as: :remove_book
-  delete "Removebook/:id", to: "removebook#destroy", as: :remove
-  # loan book
+  delete "Removebook/:id", to: "removebook#destroy", as: :removebook
+
+  # loan a book
   get "Loanbook", to: "loanbook#index", as: :loan_book
   post "Loanbook", to: "loanbook#create"
 
+  # return a book
+  get "viewLoan", to: "viewloan#index", as: :view_loan
+  delete "Returbook/:id", to: "returnbook#destroy", as: :returnbook
   get "up" => "rails/health#show", as: :rails_health_check
 end
