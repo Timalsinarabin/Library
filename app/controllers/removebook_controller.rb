@@ -7,7 +7,7 @@ class RemovebookController <ApplicationController
     if @destroy_book&.destroy
       redirect_to dashboard_path, notice: "Sucessfully removed the book"
     else
-      redirect_to dashboard_path, alert: "failed to remove sthe book"
+      redirect_to dashboard_path, alert: "failed to remove the book"
     end
   end
 end
