@@ -1,4 +1,5 @@
 class LoginController < ApplicationController
+  skip_before_action :require_login, only: [ :index, :profile ]
   def index
   end
   def profile
