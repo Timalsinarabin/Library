@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   root "main#index"
 
   # login for sign in
-  get "sign_in", to: "login#index", as: :sign_in
-  post "sign_in", to: "login#profile"
-  get "logout", to: "sessions#destroy", as: :logout
+  get "sign_in", to: "sessions#new", as: :sign_in
+  post "sign_in", to: "sessions#profile"
+  delete "logout", to: "sessions#destroy", as: :logout
   # Register a new user
   get "sign_up", to: "registrations#new", as: :sign_up
   post "sign_up", to: "registrations#create"
