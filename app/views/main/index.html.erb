@@ -2,7 +2,11 @@
 <div class="text-center bg-light p-3 rounded shadow-sm">
     <h1>Library</h1>
     <p>Welcome to our library! Explore our collection of books and resources.</p>
-    <a class="container btn btn-primary w-25" href='/sign_in'>Get started</a>
+    <% if Current.user%>
+        <%= link_to "Go to dashboard", dashboard_path, class: "btn btn-primary" %>
+    <% else %>
+        <a class="container btn btn-primary w-25" href='/sign_in'>Get started</a>
+    <% end %>
     
 </div>
 

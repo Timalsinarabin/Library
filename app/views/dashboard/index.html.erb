@@ -1,8 +1,8 @@
 
 <main class="main-content p-4">
     <div class="container">
-        <% if @user %>
-            <h1>Welcome, <%= @user.username %> to the Library Dashboard </h1>
+        <% if Current.user %>
+            <h1>Welcome, <%= Current.user.username %> to the Library Dashboard </h1>
         <%else%>
             <h1>Welcome to the Library Dashboard User</h1>
         <%end%>
@@ -58,8 +58,5 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container mt-4 text-center">
-        <%= link_to "logout", logout_path, method: :delete, class: "btn btn-danger" %>
     </div>
 </main>
