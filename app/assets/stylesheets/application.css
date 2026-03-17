@@ -26,3 +26,13 @@
     top: 20px;
     right: 20px;
 }
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border: none;
+}
+.navbar-toggler {
+    border: none;
+    margin-left: 80px;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
