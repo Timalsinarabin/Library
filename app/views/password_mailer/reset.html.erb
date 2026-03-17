@@ -1,0 +1,3 @@
+<h1>Hello <%=params[:user].email%></h1>
+<p>There was a request for reset password. The link will expire in 15min.</p>
+<%=link_to "Reset Password",password_reset_edit_url(token: @token)%>

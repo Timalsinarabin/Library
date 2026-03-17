@@ -1,4 +1,4 @@
-<ul class="nav nav-tabs my-2 mx-5 " id="myTab" role="tablist">
+<ul class="nav nav-tabs my-2 mx-5 align-items-center " id="myTab" role="tablist">
   <li class="nav-item">
     <%= link_to "Home", "/", class: "nav-link text-dark" %>
   </li>
@@ -6,23 +6,23 @@
     <%= link_to "About", about_path, class: "nav-link text-dark" %>
   </li>
   <% if Current.user %>
-    <li class="nav-item nav-link ms-auto text-dark">
-      <nav class="navbar navbar-expand-xxl">
-        <div class="container-fluid gap-4">
-          <%= Current.user.username%>
+    <li class="nav-item nav-link ms-auto w-25">
+      <nav class="navbar navbar-expand-xxl d-flex justify-content-end">
+        <div class="container-fluid">
           <div class="navbar-toggler" type="button" 
             data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <span class=" navbar-toggler-icon"></span>
           </div>
-            <div class="collapse navbar-collapse w-auto"       id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse"  id="navbarNavAltMarkup">
               <div class="navbar-nav">
+                <%= Current.user.username%>
                 <%= link_to "Change password", changepassword_path, class: "nav-link text-dark" %>
                 <%= link_to "logout", logout_path, data: {  turbo_method: :delete }, class: "nav-link text-dark" %>
               </div>
             </div>
         </div>
       </nav>
-
+    </li>
   <%else%>
     <li class="nav-item ms-auto">
       <%= link_to "Sign up", sign_up_path, class: "nav-link text-dark" %>
