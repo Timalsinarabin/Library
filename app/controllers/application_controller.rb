@@ -15,5 +15,8 @@ class ApplicationController < ActionController::Base
       redirect_to sign_in_path, alert: "Please login first"
     end
   end
+  def require_user_logged_in
+    redirect_to sign_in_path, alert: "Requires sign in" if Current.user.nil?
+  end
   stale_when_importmap_changes
 end

@@ -7,11 +7,21 @@
   </li>
   <% if Current.user %>
     <li class="nav-item nav-link ms-auto text-dark">
-      <%= Current.user.username%>
-    </li>
-    <li class="nav-item">
-      <%= link_to "logout", logout_path, data: { turbo_method: :delete }, class: "nav-link text-dark" %>
-    </li>
+      <nav class="navbar navbar-expand-xxl">
+        <div class="container-fluid gap-4">
+          <%= Current.user.username%>
+          <div class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </div>
+            <div class="collapse navbar-collapse w-auto"       id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <%= link_to "Change password", changepassword_path, class: "nav-link text-dark" %>
+                <%= link_to "logout", logout_path, data: {  turbo_method: :delete }, class: "nav-link text-dark" %>
+              </div>
+            </div>
+        </div>
+      </nav>
 
   <%else%>
     <li class="nav-item ms-auto">
