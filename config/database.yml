@@ -6,12 +6,10 @@ default: &default
 development:
   <<: *default
   database: library_development
-  username: <%= ENV['LIBRARY_DB_USER'] || 'postgres' %>
 
 test:
   <<: *default
   database: library_test
-  username: <%= ENV['LIBRARY_DB_USER'] || 'postgres' %>
 
 production:
   <<: *default
