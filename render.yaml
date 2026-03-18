@@ -1,19 +1,13 @@
 services:
   - type: web
-    name: library-app
-    env: ruby
+    name: Library-app
     plan: free
-    buildCommand: "bundle install && bundle lock --add-platform x86_64-linux && rails db:prepare"
-    startCommand: "bundle exec puma -C config/puma.rb"
+    env: ruby
+    buildCommand: bundle install
+    startCommand: bundle exec puma -C config/puma.rb
     envVars:
       - key: DATABASE_URL
-        fromDatabase:
-          name: library-db
-          property: connectionString
-      - key: RAILS_ENV
-        value: production
-      - key: RAILS_MASTER_KEY
-        sync: false
+        value: "postgresql://library_b9x3_user:r3xPrWIXJa60FALesh7EEzP42xhwfUzb@dpg-d6t4kvlm5p6s73b5nqog-a.postgres.render.com:5432/library_b9x3"
 
 databases:
   - name: library-db
