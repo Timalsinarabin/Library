@@ -7,15 +7,11 @@ development:
   <<: *default
   database: library_development
   username: <%= ENV['LIBRARY_DB_USER'] || 'postgres' %>
-  password: <%= ENV['LIBRARY_DB_PASSWORD'] || '' %>
-  host: localhost
 
 test:
   <<: *default
   database: library_test
   username: <%= ENV['LIBRARY_DB_USER'] || 'postgres' %>
-  password: <%= ENV['LIBRARY_DB_PASSWORD'] || '' %>
-  host: localhost
 
 production:
   <<: *default
