@@ -1,7 +1,7 @@
 
 <div class="container d-flex flex-column align-items-center justify-content-center mt-5">
-    <h1>Register Now</h1>
-    <%= form_with url: sign_up_path, model: @user, method: "post",local: true do |form| %>
+    <h1>Change password</h1>
+    <%= form_with model: Current.user, url: changepassword_path, method: "patch", data: { turbo: false } do |form| %>
     <% if form.object.errors.any? %>
         <div class="alert alert-danger">
             <ul>
@@ -12,14 +12,6 @@
         </div>
     <% end %>
         <div class="form-row mt-4">
-            <div class="form-group">
-              <%= form.label :email, "Email" %>
-              <%= form.text_field :email, class: "form-control", placeholder: "Email" %>
-            </div>
-            <div class="form-group mt-4">
-              <%= form.label :username, "Username" %>
-              <%= form.text_field :username, class: "form-control", placeholder: "Username" %>
-            </div>
             <div class="form-group mt-4">
               <%= form.label :password, "Password" %>
               <%= form.password_field :password, class: "form-control", placeholder: "Password" %>
@@ -30,7 +22,7 @@
             </div>
         </div> 
         <div class="form-row d-flex justify-content-center mt-4">
-            <%= form.submit "Register", class: "btn btn-primary" %>
+            <%= form.submit "Change password", class: "btn btn-primary" %>
         </div>
     <% end %>
 </div>

@@ -22,3 +22,17 @@
     left: -200px; /* Adjust this value based on your sidebar width */
     transition: left 0.3s ease-in-out;
 }
+.menubar{
+    top: 20px;
+    right: 20px;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border: none;
+}
+.navbar-toggler {
+    border: none;
+    margin-left: 80px;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
