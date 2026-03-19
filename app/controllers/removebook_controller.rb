@@ -1,6 +1,6 @@
 class RemovebookController <ApplicationController
   def index
-    @destroy_books = LibBook.all
+    @destroy_books = LibBook.order(:bookname)
   end
   def destroy
     @destroy_book = LibBook.find_by(id: params[:id])

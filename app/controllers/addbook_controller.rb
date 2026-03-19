@@ -13,6 +13,6 @@ class AddbookController < ApplicationController
   end
   private
   def libBook_param
-    params.require(:lib_book).permit(:bookname, :author)
+    params.require(:lib_book).permit(:bookname, :author, :price)
   end
 end
