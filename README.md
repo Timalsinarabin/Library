@@ -1,24 +1,126 @@
-# README
+# 📚 Library Management System (Rails)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Library Management System built using Ruby on Rails.
+This project allows users to manage books, search for them, and handle authentication features like password change and reset.
 
-Things you may want to cover:
+---
 
-* Ruby version
+## 🚀 Features
 
-* System dependencies
+* 🔐 User Authentication (Login / Logout)
+* 🔑 Change Password
+* 📧 Password Reset via Email
+* 📚 Book Management (LibBook)
 
-* Configuration
+  * Add books
+  * View all books
+  * Search books by name
+* 💰 Book price support
+* 🎨 Simple UI using Bootstrap
 
-* Database creation
+---
 
-* Database initialization
+## 🛠️ Tech Stack
 
-* How to run the test suite
+* Ruby on Rails
+* SQLite3
+* Bootstrap (for UI)
 
-* Services (job queues, cache servers, search engines, etc.)
+---
 
-* Deployment instructions
+## 📦 Setup Instructions
 
-* ...
+1. Clone the repository:
+
+   ```bash
+   git clone <your-repo-url>
+   cd library
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   bundle install
+   ```
+
+3. Setup database:
+
+   ```bash
+   rails db:create
+   rails db:migrate
+   ```
+
+4. Run server:
+
+   ```bash
+   rails server
+   ```
+
+5. Open in browser:
+
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## 🧪 Sample Data
+
+You can quickly insert books using:
+
+```bash
+rails console
+```
+
+```ruby
+15.times do |i|
+  LibBook.create(
+    bookname: "Book #{i+1}",
+    author: "Author #{i+1}",
+    price: rand(100..500)
+  )
+end
+```
+
+---
+
+## 🔍 Search Feature
+
+Search books by name using:
+
+* Input field on "All Books" page
+* Matches partial names using SQL `LIKE`
+
+---
+
+## ⚠️ Important Notes
+
+* Always backup database before running migrations:
+
+  ```bash
+  cp db/development.sqlite3 db/backup.sqlite3
+  ```
+* Use `GET` method for search forms
+* Use `flash.now` when rendering errors
+
+---
+
+## 📈 Future Improvements
+
+* Borrow / Return system
+* User roles (admin/user)
+* Pagination
+* Better UI/UX
+* API support
+
+---
+
+## 👤 Author
+
+Rabin Timalsina
+
+---
+
+## 💡 Status
+
+🚧 Learning Project – actively improving
