@@ -33,7 +33,7 @@ This project allows users to manage books, search for them, and handle authentic
 1. Clone the repository:
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Timalsinarabin/Library.git
    cd library
    ```
 
@@ -62,25 +62,6 @@ This project allows users to manage books, search for them, and handle authentic
    http://localhost:3000
    ```
 
----
-
-## 🧪 Sample Data
-
-You can quickly insert books using:
-
-```bash
-rails console
-```
-
-```ruby
-15.times do |i|
-  LibBook.create(
-    bookname: "Book #{i+1}",
-    author: "Author #{i+1}",
-    price: rand(100..500)
-  )
-end
-```
 
 ---
 
