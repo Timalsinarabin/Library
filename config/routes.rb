@@ -27,7 +27,6 @@ Rails.application.routes.draw do
 
   # View all books in library
   get "viewbook", to: "viewbooks#viewall", as: :viewall_books
-
   # Add a book in library
   get "Addbook", to: "addbook#new", as: :add_book
   post "Addbook", to: "addbook#create"

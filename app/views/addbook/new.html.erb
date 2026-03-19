@@ -9,6 +9,10 @@
     <%= form.label :author, "Author" %>
     <%= form.text_field :author, class: "form-control", required: true %>
   </div>
-  <%= form.submit "Add Book", class: "btn btn-primary" %>
+    <div class="form-group">
+    <%= form.label :price, "Price" %>
+    <%= form.text_field :price, class: "form-control", required: true %>
+  </div>
+  <%= form.submit "Add Book", class: "btn btn-primary mt-2" %>
 <% end %>
 </div>

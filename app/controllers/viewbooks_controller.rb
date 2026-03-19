@@ -1,5 +1,9 @@
 class ViewbooksController < ApplicationController
   def viewall
-    @books = LibBook.order(:bookname)
+    if params[:search]
+      @books = LibBook.where("bookname like ?", "%#{params[:search]}%")
+    else
+      @books = LibBook.order(:bookname)
+    end
   end
 end
