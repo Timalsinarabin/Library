@@ -11,10 +11,10 @@ This project allows users to manage books, search for them, and handle authentic
 * 🔑 Change Password
 * 📧 Password Reset via Email
 * 📚 Book Management (LibBook)
-
   * Add books
   * View all books
   * Search books by name
+  * Borrow / Return system
 * 💰 Book price support
 * 🎨 Simple UI using Bootstrap
 
@@ -84,15 +84,6 @@ Search books by name using:
 * Use `GET` method for search forms
 * Use `flash.now` when rendering errors
 
----
-
-## 📈 Future Improvements
-
-* Borrow / Return system
-* User roles (admin/user)
-* Pagination
-* Better UI/UX
-* API support
 
 ---
 
