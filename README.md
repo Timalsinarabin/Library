@@ -1,24 +1,98 @@
-# README
+# 📚 Library Management System (Rails)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Library Management System built using Ruby on Rails.
+This project allows users to manage books, search for them, and handle authentication features like password change and reset.
 
-Things you may want to cover:
+---
 
-* Ruby version
+## 🚀 Features
 
-* System dependencies
+* 🔐 User Authentication (Login / Logout)
+* 🔑 Change Password
+* 📧 Password Reset via Email
+* 📚 Book Management (LibBook)
+  * Add books
+  * View all books
+  * Search books by name
+  * Borrow / Return system
+* 💰 Book price support
+* 🎨 Simple UI using Bootstrap
 
-* Configuration
+---
 
-* Database creation
+## 🛠️ Tech Stack
 
-* Database initialization
+* Ruby on Rails
+* SQLite3
+* Bootstrap (for UI)
 
-* How to run the test suite
+---
 
-* Services (job queues, cache servers, search engines, etc.)
+## 📦 Setup Instructions
 
-* Deployment instructions
+1. Clone the repository:
 
-* ...
+   ```bash
+   git clone https://github.com/Timalsinarabin/Library.git
+   cd library
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   bundle install
+   ```
+
+3. Setup database:
+
+   ```bash
+   rails db:create
+   rails db:migrate
+   ```
+
+4. Run server:
+
+   ```bash
+   rails server
+   ```
+
+5. Open in browser:
+
+   ```
+   http://localhost:3000
+   ```
+
+
+---
+
+## 🔍 Search Feature
+
+Search books by name using:
+
+* Input field on "All Books" page
+* Matches partial names using SQL `LIKE`
+
+---
+
+## ⚠️ Important Notes
+
+* Always backup database before running migrations:
+
+  ```bash
+  cp db/development.sqlite3 db/backup.sqlite3
+  ```
+* Use `GET` method for search forms
+* Use `flash.now` when rendering errors
+
+
+---
+
+## 👤 Author
+
+Rabin Timalsina
+
+---
+
+## 💡 Status
+
+🚧 Learning Project – actively improving
